@@ -1,0 +1,232 @@
+.loading-overlay {
+     position:fixed;
+ 
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 10; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+.spinner {
+position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+/* Master Styles */
+.calender {
+   width: 100px;
+   
+}
+input {
+   width: 100px;
+   
+}
+.ui-md-4 {
+max-width : 250px !important;
+
+}
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+
+h2, h3 {
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+body, input[text], button {
+  color: #888;
+  font-family: Cambria, Georgia;
+}
+a {
+  cursor: pointer;
+  cursor: hand;
+}
+button {
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: auto;
+}
+
+/* Navigation link styles */
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-top: 10px;
+  display: inline-block;
+  
+  border-radius: 4px;
+}
+nav a:visited, a:link {
+  color: #607D8B;
+}
+nav a:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+nav a.active {
+  color: #039be5;
+}
+
+/* everywhere else */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 1em;
+}
+.profit {
+  color: green;
+}
+.profitBack {
+  background-color: green;
+  color: white;
+}
+.loss {
+  color :red;
+}
+.lossBack {
+  background-color :red;
+  color: white;
+}
+.error {
+  color :red;
+}
+
+/* Related to menu icon*/
+
+body{
+   font-family: Roboto;
+  font-size: 16px;
+  color: #424242;
+	margin:0;
+	width:100%;
+	height:100vh;
+  	background:#ffffff;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+header{
+	width:100%; 
+	background:#ffffff; 
+	
+	line-height:60px;
+	border-bottom:1px solid #dddddd;
+}
+header{display:inline-block; font-size:16px;}
+
+
+.nav {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav__list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #616161;
+}
+.nav__item {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 24%;
+  text-align: center;
+  line-height: 24px;
+
+  text-transform: uppercase;
+  border-right:1px solid #E0E0E0;
+
+  
+}
+nav {
+  box-shadow: 0 12px 5px rgba(0, 0, 0, 0.26);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ .hamburger{
+ display:none;
+ } 
+@media screen and (max-width: 650px){
+
+
+ .nav__item{
+ 	display: list-item;
+    border-bottom: 1px solid #E0E0E0;
+    width: 100%;
+   
+    text-align: left;
+    border-left:1px solid #E0E0E0;
+    line-height: 24px;
+    padding: 10px;
+ }
+ .hamburger {
+	display :block;
+	position: absolute;
+	right: 5px;
+	top:5px;
+	}
+	
+	.hamburger svg {
+    width: 32px;
+    fill: #E0E0E0;
+  }
+   .nav {
+    z-index: 10;
+    background-color: #fff;
+    width: 200px;
+   
+    position: absolute;
+    right:0px;
+    /* This trasform moves the drawer off canvas. */
+    -webkit-transform: translate(-1300px, 0);
+    transform: translate(-1300px, 0);
+    /* Optionally, we animate the drawer. */
+    transition: transform 0.0s ease;
+  }
+  
+  .nav.open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+
+/* End of menu icon*/
