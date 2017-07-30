@@ -3,3 +3,4 @@ ui/src/.vscode/**/*
 _config.yml
 ui/src/**/*.js
 ui/src/**/*.map
+web/**/*
