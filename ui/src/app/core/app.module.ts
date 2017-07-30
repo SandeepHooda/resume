@@ -5,14 +5,16 @@ import {MAIN} from '../main/main.component';
 import {IOT} from '../iot/iot.component';
 import {NAVBAR} from '../navigation/nav.component'
 import {HOME} from '../home/home.component';
-import {CONTACT} from '../contact/contact.component';
-import {ABOUT} from '../about/about.component'
+import {WORKEX} from '../workex/workex.component';
+import {ABOUT} from '../about/about.component';
+import {AccordionModule} from 'primeng/primeng';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 @NgModule({
   imports: [
-  AppRoutingModule,BrowserModule
+  AppRoutingModule,BrowserModule,AccordionModule,BrowserAnimationsModule
   ],
   declarations: [
-     MAIN, IOT, NAVBAR, HOME,CONTACT, ABOUT
+     MAIN, IOT, NAVBAR, HOME,WORKEX, ABOUT
   ],
   providers: [ ],
   bootstrap: [ HOME ]

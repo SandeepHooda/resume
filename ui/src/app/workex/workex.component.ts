@@ -1,9 +1,9 @@
 import { Component, ViewEncapsulation  } from '@angular/core';
 
 @Component({
- selector : 'contact', 
-  templateUrl: './contact.component.html',
+ selector : 'workex', 
+  templateUrl: './workex.component.html',
   encapsulation: ViewEncapsulation.None 
 })
-export class CONTACT  {
+export class WORKEX  {
 }

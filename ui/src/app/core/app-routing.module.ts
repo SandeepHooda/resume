@@ -3,13 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 
 import {MAIN} from '../main/main.component';
 import {IOT} from '../iot/iot.component';
-import {CONTACT} from '../contact/contact.component';
+import {WORKEX} from '../workex/workex.component';
 import {ABOUT} from '../about/about.component'
 const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
    { path: 'main',  component: MAIN },
    { path: 'iot',  component: IOT },
-   { path: 'contact',  component: CONTACT },
+   { path: 'workex',  component: WORKEX },
    { path: 'about',  component: ABOUT }
   
 ];
