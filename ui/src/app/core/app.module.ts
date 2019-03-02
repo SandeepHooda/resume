@@ -7,11 +7,16 @@ import {NAVBAR} from '../navigation/nav.component'
 import {HOME} from '../home/home.component';
 import {WORKEX} from '../workex/workex.component';
 import {ABOUT} from '../about/about.component';
-import {AccordionModule} from 'primeng/primeng';
+import { FormsModule }   from '@angular/forms';
+import {AccordionModule, InputTextModule, ButtonModule} from 'primeng/primeng';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { HttpModule, JsonpModule}    from '@angular/http';
 @NgModule({
   imports: [
-  AppRoutingModule,BrowserModule,AccordionModule,BrowserAnimationsModule
+  AppRoutingModule,BrowserModule,AccordionModule,BrowserAnimationsModule , InputTextModule, ButtonModule,
+  FormsModule,
+  HttpModule,
+  JsonpModule,
   ],
   declarations: [
      MAIN, IOT, NAVBAR, HOME,WORKEX, ABOUT

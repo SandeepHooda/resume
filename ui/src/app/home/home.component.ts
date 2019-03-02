@@ -1,3 +1,9 @@
+import { Injectable } from '@angular/core';
+import { Http, Response }          from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/catch';
+import  'rxjs/add/operator/map';
+import { Headers, RequestOptions } from '@angular/http';
 import { Component, ViewEncapsulation,OnInit  } from '@angular/core';
 import {AGE} from './age';
 
@@ -9,9 +15,53 @@ import {AGE} from './age';
 })
 export class HOME implements OnInit {
 private ageStr : string;
+private stepIndicator : number =0;
+private toEmail : string;
+constructor (private http: Http) {
+}
    ngOnInit(): void {
      let today:Date = new Date();
     this.ageStr = this.getAge('09/27/2004');
+  }
+  private enableSendEmail(){
+    this.stepIndicator = 1;
+  }
+  private sendEmail (){
+    this.sendEmailSrv().subscribe( 
+      corpAnalysis => this.response(corpAnalysis),
+          error => this.showError(error)
+        );
+  }
+  private response(error:any) {
+   
+    this.stepIndicator = 0;
+  }
+  private showError(error:any) {
+   
+    this.stepIndicator = 0;
+  }
+  private sendEmailSrv() :Observable<string>{
+    this.stepIndicator = 0;
+    let url:string = 'https://sandeephoodaresume.appspot.com/sandeephoodaresume?to='+this.toEmail;
+   return this.http.get(url).map(this.extractResult).catch(this.handleError);
+  }
+  private extractResult(res: Response) {
+    let body = "SUCCESS"; // res.json();
+    return body;
+  }
+ 
+  private handleError (error: Response | any) {
+    // In a real world app, you might use a remote logging infrastructure
+    let errMsg: string;
+    if (error instanceof Response) {
+      const body = error.json() || '';
+      const err = body.error || JSON.stringify(body);
+      errMsg = `${error.status} - ${error.statusText || ''} ${err}`;
+    } else {
+      errMsg = error.message ? error.message : error.toString();
+    }
+    console.error(errMsg);
+    return Observable.throw(errMsg);
   }
   private getAge(dateString: string) : string{
   let now : Date= new Date();

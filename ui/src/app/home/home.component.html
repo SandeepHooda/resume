@@ -1,3 +1,11 @@
+<div  *ngIf="stepIndicator == 0">
+    <button pButton type="button" (click)="enableSendEmail()" label="Email"></button>
+</div>
+
+<div *ngIf="stepIndicator == 1">
+    <input type="text" pInputText [(ngModel)]="toEmail" style="width: 250px;"/>
+    <button pButton type="button" (click)="sendEmail()" label="Send"></button>
+</div>
 <h3>Sandeep Hooda</h3> <h5> Total experience: {{ageStr}}</h5>
 <h5>US Green card status: EB2 - 140 Approved (priority date : 10-03-2015)</h5>
 <nav-bar></nav-bar>
